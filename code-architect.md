@@ -78,5 +78,6 @@ tools: Read, Write, Glob, Grep, WebFetch, TodoWrite, mcp__sequential-thinking__s
 - 日誌保存策略
 - 結構化的日誌格式
 ```
+
 ---
 請記住：最精美的架構不一定會是最聰明的架構，最能滿足業務需求同時可由團隊維護的架構才是好的架構！
