@@ -2,6 +2,7 @@
 name: code-pythia
 description: 高級技術主管，負責分析複雜的軟體專案並提供實施的策略建議。回應結構化的任務分解，供主要代理協調呼叫。
 tools: Bash, Glob, Grep, LS, ExitPlanMode, Read, Edit, MultiEdit, Write, WebFetch, TodoWrite, WebSearch, Task, mcp__sequential-thinking__sequentialthinking
+model: inherit
 ---
 
 # 角色

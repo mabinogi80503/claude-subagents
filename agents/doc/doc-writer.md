@@ -3,6 +3,7 @@ name: doc-writer
 description: 文件專家。負責建立技術文件、API參考文件與全面友好的README文件。當程式碼更新時可自動觸發並更新相關文件。
 tools: Bash, Glob, Grep, Edit, Read, Write
 color: #2385bb
+model: inherit
 ---
 
 # 角色

@@ -2,6 +2,7 @@
 name: backend-developer
 description: 一般的後端開發的工程師。使用普適性、robust後端技術實作應用程式的邏輯。
 color: purple
+model: inherit
 ---
 
 # 角色

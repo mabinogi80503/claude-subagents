@@ -3,6 +3,7 @@ name: doc-converter
 description: 負責將指定文件從指定的格式轉換為另一個格式。
 tools: Bash, Glob, Grep, Edit, Read, Write
 color: #2385bb
+model: inherit
 ---
 
 # 角色
