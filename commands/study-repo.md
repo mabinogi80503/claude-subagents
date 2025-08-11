@@ -1,30 +1,82 @@
 ---
-description: "使用 code-archaeologist agent 研究函式庫"
+description: "使用 code-archaeologist agent 深度研究程式碼庫"
 allowed-tools: ["Task", "Read", "Write", "Edit", "MultiEdit", "Grep", "Glob"]
 ---
 
-# 流程定義
-使用智慧的 code-archaeologist sub agent 開展對函式庫'$ARGUMENTS'完整的研究工作
+# 程式碼庫深度研究工作流
 
-# 使用方式
-```
-/study-repo $ARGUMENTS
-```
+運用專業 Code-Archaeologist Sub-Agent 進行程式碼庫的全面分析與文件化，提供完整的技術洞察報告。
 
-# 角色
-你是一個資深資源管理人，你將會調度多個 code-archaeologist sub agents 來完成分析任務。你的職責就是調控 agent 之間的協作並控制輸出的品
-質。
-
-# 工作流
-
-**務必**以提到的順序來使用定義pipline:
-
-```
-Use the code-archaeologist sub-agent to deeply analyze, investigate, and complete the results for the repo [$ARGUMENTS]. If there is too much data to scan, you can run code-archaeologist sub-agents in parallel. Then, you will summarize all the sub-agents’ results and save them into a markdown file.
+## 指令用法
+```bash
+/study-repo [程式碼庫路徑或名稱]
 ```
 
-# 輸出格式
-- 工作流啟動：依照要求啟動工作流
-- 工作進程：可持續觀察與監督每個 sub agent 負責的工作與結果
-- 結果分析：最終的實現結果與其分析
+## 工作流定位
+
+### 輸入參數
+- **$ARGUMENTS**: 目標程式碼庫的路徑、名稱或專案識別
+- **分析範圍**: 完整的程式碼庫架構、設計模式與業務邏輯
+
+### 協調者角色
+資深程式碼庫分析協調員，專責調度多個 Code-Archaeologist Sub-Agent 執行並行分析任務：
+- **任務分配**: 根據程式碼庫複雜度進行智慧分工
+- **進度監控**: 即時追蹤各 Agent 的分析進度與品質
+- **結果整合**: 統整所有分析結果為綜合性技術報告
+
+## 分析執行策略
+
+### 智慧化 Agent 調度
+**依據程式碼庫規模採用適當的分析策略：**
+
+#### 單一 Agent 模式
+- **適用場景**: 中小型程式碼庫（< 10,000 行）
+- **執行方式**: 單一 code-archaeologist 完整分析
+- **優勢**: 分析結果一致性高，邏輯連貫
+
+#### 並行 Agent 模式  
+- **適用場景**: 大型程式碼庫（≥ 10,000 行）
+- **執行方式**: 多個 code-archaeologist 並行處理不同模組
+- **優勢**: 分析效率高，可處理複雜大型專案
+
+### 標準分析流程
+```
+掃描指定 codebase 的檔案與資料夾數目
+↓
+依據掃描結果，確定執行單一或並行任務
+↓
+code-archaeologist[1] → 模組A分析
+code-archaeologist[2] → 模組B分析  
+code-archaeologist[n] → 模組N分析
+         ↓
+    結果整合與綜合分析
+         ↓
+   生成完整研究報告
+```
+
+## 分析交付物
+
+### 1. 工作流啟動
+- 評估程式碼庫規模與複雜度
+- 制定最適分析策略與 Agent 配置
+- 啟動分析任務執行
+
+### 2. 階段性監控
+- 即時追蹤各 Sub-Agent 分析進度
+- 監控分析品質與深度覆蓋率
+- 提供分析狀態回饋與異常處理
+
+### 3. 綜合研究報告
+- **技術架構分析**: 系統設計模式與架構決策
+- **程式碼品質評估**: 程式碼結構、可維護性分析
+- **業務邏輯梳理**: 核心功能與資料流向分析
+- **改進建議**: 重構機會與最佳化方向
+
+### 報告輸出格式
+最終分析結果將整合為標準化 Markdown 報告：
+- `code-analysis-report.md` - 主要分析報告
+- `architecture-overview.md` - 架構概覽文件
+
+---
+**分析理念**: 深度洞察、系統性梳理、實用建議、文件完整
 
